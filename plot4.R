@@ -27,10 +27,10 @@ png(filename='plot4.png')
 par(mfrow=c(2,2))
 
 ##Create Plot In Top Left Corner(global active power vs time):
-plot(maindata$DateTime, maindata$Global_active_power, ylab='Global Active Power(kilowatts)',xlab='', type='l')
+plot(maindata$DateTime, maindata$Global_active_power, ylab='Global Active Power',xlab='', type='l')
 
 ##Create Plot In Top Right Corner (voltage vs time):
-plot(maindata$DateTime, maindata$Voltage, ylab='Voltage (in Volts)',xlab='Date and Time', type='l')
+plot(maindata$DateTime, maindata$Voltage, ylab='Voltage',xlab='datetime', type='l')
 
 ##Create Bottom Left Plot (sub metering-plot3)
 plot(maindata$DateTime, maindata$Sub_metering_1, ylab='Energy sub metering',xlab='', type='l')
@@ -39,7 +39,7 @@ lines(maindata$DateTime, maindata$Sub_metering_3,col='blue')
 legend('topright', legend=c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),col=c('black','red','blue'),lty='solid')
 
 ## Create Bottom Right Plot(Global Reactive Power Vs Time):
-plot(maindata$DateTime, maindata$Global_reactive_power, ylab='Global Reactive Power (In Kilowatts)',xlab='Date and Time', type='l')
+plot(maindata$DateTime, maindata$Global_reactive_power, ylab='Global_Reactive_Power',xlab='datetime', type='l')
 
 
 ##Turn Off PNG Device
